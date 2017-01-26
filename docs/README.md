@@ -1,5 +1,7 @@
-# Docs
+# Welcome to the docs
 
-`src/object-sql.js` is just a wrapper for `src/Query.js` for a list of methods [see its documentation](./Query.md).
+For a quick-start [see the examples](./examples.md) or take a look at the [`Query` documentation](./Query.md).
 
-There are also some [examples](./examples.md) and the [specs](../tests).
+Note that `src/object-sql.js` is just a simple wrapper for `src/Query.js`.
+
+For more examples please [see the specs](https://github.com/ankr/object-sql.js/tree/master/tests).
