@@ -1,0 +1,3 @@
+# Docs
+
+[Examples](./examples.md)
