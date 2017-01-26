@@ -157,11 +157,6 @@ module.exports = class Query {
       result = reducer([['_root', result]])[0][1];
     }
 
-    // order()
-    if (this.sorter) {
-      result = result.sort(this.sorter);
-    }
-
     // having()
     if (this.filters.length) {
       result = result.filter((group) => {
@@ -169,6 +164,11 @@ module.exports = class Query {
           return rules.some((rule) => rule(group));
         });
       });
+    }
+
+    // order()
+    if (this.sorter) {
+      result = result.sort(this.sorter);
     }
 
     // select()
