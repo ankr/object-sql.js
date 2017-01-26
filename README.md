@@ -2,7 +2,7 @@
 
 `object-sql` is a tool for querying javascript objects using a sql like syntax. It was originally inspired from a [kata by surtich](https://www.codewars.com/kata/545434090294935e7d0010ab).
 
-Please see the [docs](./docs) for more informations.
+Please see the [docs](https://ankr.github.io/object-sql.js) for more informations.
 
 ## Examples
 ```javascript
