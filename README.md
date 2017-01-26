@@ -1,7 +1,7 @@
 # object-sql.js
 
 
-## Simple example
+## Basic example
 ```javascript
 const q = require('src/object-sql.js');
 
@@ -15,49 +15,57 @@ const r = q()
 console.log(r); // [4, 3]
 ```
 
-## Advanced example
+## GROUP example
 ```javascript
-const teachers = [
+const a = [1, 2, 2, 1, 3, 2, 3, 1];
+const r = q().from(a).group(n => n).execute();
+
+console.log(r); // [[1, [1,1,1]], [2, [2,2,2]], [3, [3,3]]]
+```
+
+## JOIN example
+```javascript
+const owners = [
   {id: 1, name: 'Alice'},
   {id: 2, name: 'Bob'}
 ];
 
-const students = [
-  {id: 1, teacher_id: 1, name: 'Charlie'},
-  {id: 2, teacher_id: 2, name: 'Dave'},
-  {id: 3, teacher_id: 1, name: 'Eve'},
-  {id: 4, teacher_id: 3, name: 'Frank'}
+const dogs = [
+  {id: 1, owner_id: 1, name: 'Charlie'},
+  {id: 2, owner_id: 2, name: 'Dave'},
+  {id: 3, owner_id: 1, name: 'Eve'},
+  {id: 4, owner_id: 3, name: 'Frank'}
 ];
 
 const result = q()
   .select((tables) => ({
     id: tables[0].id,
     name: tables[0].name,
-    teacher: tables[1],
+    owner: tables[1],
   }))
-  .from(students, teachers)
-  .where((tables) => tables[0].teacher_id === tables[1].id)
+  .from(dogs, owners)
+  .where((tables) => tables[0].owner_id === tables[1].id)
   .execute();
 
 console.log(result);
 // [{
 //     "id": 1,
 //     "name": "Charlie",
-//     "teacher": {
+//     "owner": {
 //       "id": 1,
 //       "name": "Alice"
 //     }
 //   }, {
 //     "id": 2,
 //     "name": "Dave",
-//     "teacher": {
+//     "owner": {
 //       "id": 2,
 //       "name": "Bob"
 //     }
 //   }, {
 //     "id": 3,
 //     "name": "Eve",
-//     "teacher": {
+//     "owner": {
 //       "id": 1,
 //       "name": "Alice"
 //     }
