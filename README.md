@@ -39,3 +39,8 @@ Tests are running using `jasmine-node`. Install and run `bin/test`.
 npm install
 bin/test
 ```
+
+## Todo
+
+ - Support joins on multiple objects
+ - Refactor joins to return format; `{key: [v,a,l,u,e,s]}` instead of `[key, [v,a,l,u,e,s]]`.
