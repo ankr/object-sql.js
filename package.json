@@ -1,4 +1,30 @@
 {
+  "name": "object-sql",
+  "description": "`object-sql` is a tool for querying javascript objects using a sql like syntax. It was originally inspired from a [kata by surtich](https://www.codewars.com/kata/545434090294935e7d0010ab).",
+  "version": "1.0.0",
+  "main": "src/object-sql.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "bin/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankr/object-sql.js.git"
+  },
+  "keywords": [
+    "sql",
+    "javascript",
+    "nodejs"
+  ],
+  "author": "ankr",
+  "license": "WFTPL",
+  "bugs": {
+    "url": "https://github.com/ankr/object-sql.js/issues"
+  },
+  "homepage": "https://github.com/ankr/object-sql.js#readme",
   "dependencies": {
     "jasmine": "^2.5.3"
   }
