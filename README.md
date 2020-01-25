@@ -23,7 +23,7 @@ const nameAndAge = (user) => ({
   age: user.age
 });
 
-const thirtyOrAbove (user) => user.age >= 30;
+const thirtyOrAbove = (user) => user.age >= 30;
 
 q().select(nameAndAge).from(users).where(thirtyOrAbove).execute();
 // [
