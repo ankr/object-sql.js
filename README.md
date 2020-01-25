@@ -8,7 +8,7 @@ Please see the [docs](https://ankr.github.io/object-sql.js) for more information
 ```javascript
 const q = require('src/object-sql.js');
 
-q.select().from([1, 2, 3]).execute(); // [1, 2, 3]
+q().select().from([1, 2, 3]).execute(); // [1, 2, 3]
 ```
 
 ```javascript
@@ -25,7 +25,7 @@ const nameAndAge = (user) => ({
 
 const thirtyOrAbove (user) => user.age >= 30;
 
-q.select(nameAndAge).from(users).where(thirtyOrAbove).execute();
+q().select(nameAndAge).from(users).where(thirtyOrAbove).execute();
 // [
 //   {name: 'Alice', age: 35},
 //   {name: 'Charlie', age: 30}
