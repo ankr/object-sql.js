@@ -8,7 +8,7 @@ const Query = require('src/Query.js');
 const q = new Query;
 
 // Note you must call execute() to get the results
-q.select().from([1, 2, 3]).execute(); // [1, 2, 3]
+q().select().from([1, 2, 3]).execute(); // [1, 2, 3]
 ```
 
 ## Methods
