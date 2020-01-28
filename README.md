@@ -34,10 +34,10 @@ q().select(nameAndAge).from(users).where(thirtyOrAbove).execute();
 
 ## Tests
 
-Tests are running using `jasmine-node`. Install and run `bin/test`.
+Tests are running using `jasmine`.
 ```bash
 npm install
-bin/test
+npm test
 ```
 
 ## Todo
