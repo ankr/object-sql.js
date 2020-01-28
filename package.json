@@ -6,9 +6,11 @@
   "directories": {
     "doc": "docs"
   },
-  "devDependencies": {},
+  "devDependencies": {
+      "jasmine": "^3.5.0"
+  },
   "scripts": {
-    "test": "bin/test"
+    "test": "./node_modules/jasmine/bin/jasmine.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +27,5 @@
     "url": "https://github.com/ankr/object-sql.js/issues"
   },
   "homepage": "https://github.com/ankr/object-sql.js#readme",
-  "dependencies": {
-    "jasmine": "^3.5.0"
-  }
+  "dependencies": {}
 }
