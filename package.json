@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "devDependencies": {
-      "jasmine": "^3.5.0"
+      "jasmine": "^3.6.1"
   },
   "scripts": {
     "test": "./node_modules/jasmine/bin/jasmine.js"
